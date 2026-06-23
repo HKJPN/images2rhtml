@@ -5,7 +5,7 @@
 sample.restricted.view.htmlをMD//WORKSでオープンして編集するには、次のRecovery passwordを使用します。
 
 ```text
-images2rhtml-sample
+sample1234
 ```
 
 > このパスワードは公開サンプル専用です。
