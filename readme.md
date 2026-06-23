@@ -284,9 +284,7 @@ The final HTML file will be significantly larger than the sum of your original i
 * **Viewing:** Fast and smooth across all tested browsers and devices.
 * **Restoring/Editing in MD//WORKS:**
 * **~20 images:** Very smooth, even on older PCs and iPads.
-* **20–40 images:** Practical for most environments.
-* **40–50+ images:** Viewing is fine, but restoring the Markdown inside MD//WORKS may take 15–30 seconds on older devices and editing may feel slightly sluggish. Consider splitting massive presentations into "Part 1" and "Part 2".
-
+* **40+ images images:** Viewing is fine, but restoring the Markdown inside MD//WORKS may take 15–30 seconds on older devices and editing may feel slightly sluggish. Consider splitting massive presentations into "Part 1" and "Part 2".
 
 
 ---
