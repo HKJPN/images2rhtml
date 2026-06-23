@@ -24,7 +24,7 @@ from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 from pathlib import Path
 from typing import Any, Literal
 
-VERSION = "0.1.0.dev3"
+VERSION = "0.1.0"
 SUPPORTED_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp"}
 MIME_TYPES = {"png": "image/png", "jpeg": "image/jpeg", "webp": "image/webp"}
 EXIT_SUCCESS = 0
