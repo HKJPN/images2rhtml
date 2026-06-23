@@ -409,7 +409,7 @@ python .\tools\images2rhtml\images2rHTML.py .\slides `
 * 第7世代Core i5搭載PCでは、復元に約15秒かかり、その後の編集もやや緩慢だが利用可能
 * A16搭載iPadではMD//WORKSでの復元は数秒で、その後の編集も問題なし
 * 第6世代iPadでは、復元に約30秒かかり、その後の編集もやや緩慢だが利用可能
-* Pythonによる生成と暗号化は、上記資料でもほぼ一瞬
+* Pythonによる生成と暗号化は、第7世代Core i5でも一瞬で完了
 
 ### 利用の目安
 
