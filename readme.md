@@ -312,7 +312,7 @@ The generated HTML securely stores your original Markdown using AES-GCM encrypti
 * **Display Data:** The data meant for browser viewing is accessible within the HTML structure. Restricted Viewer deters casual copying, but it does not encrypt the visible display data against technical extraction.
 * **Recovery Data:** The underlying Markdown meant for MD//WORKS is heavily encrypted via AES-GCM and cannot be extracted without the password.
 * **What it deters:** Unintended text selection, casual copy/paste, standard printing, right-clicking, image dragging, and accidental modifications by the viewer.
-* **What it CANNOT prevent:** Screenshots, camera photos of the screen, browser Developer Tools extraction, raw HTML parsing. Do not rely solely on this tool for strict legal DRM or highly confidential trade secrets.
+* **What it CANNOT prevent:** Screenshots, camera photos of the screen, browser Developer Tools extraction, raw HTML parsing. Do not rely solely on this tool for strict legal DRM or highly confidential trade secrets. Consider using tools equipped with encryption features, such as MD//WORKS.
 
 ---
 
