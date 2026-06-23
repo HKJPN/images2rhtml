@@ -1,6 +1,6 @@
 # images2rhtml
 
-[🇺🇸 English](readmeE.md) or [🇯🇵 日本語](readme-ja.md)
+[🇺🇸 English](readme.md) or [🇯🇵 日本語](readme-ja.md)
 <img width="1280" height="720" alt="プレゼンテーション1" src="https://github.com/user-attachments/assets/a5279906-2db3-4e67-9a60-9e645ae6e726" />
 `images2rHTML.py` is a Python CLI tool that compiles multiple images from a folder into a single **Restricted Viewer HTML** file, complete with a navigable Outline (Table of Contents).
 
