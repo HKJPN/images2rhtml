@@ -1,6 +1,6 @@
 # images2rHTML.py ユーザーマニュアル ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
-[🇺🇸 English](README.md) or [🇯🇵 日本語](README-ja.md)
+[🇺🇸 English](readme.md) or [🇯🇵 日本語](readme-ja.md)
   <img width="1280" height="720" alt="プレゼンテーション1" src="https://github.com/user-attachments/assets/13934b8b-bf8e-4974-ae66-ea30d8b84910" />
 
 `images2rHTML.py`は、フォルダ内の複数画像を、Outline（目次）付きの**Restricted Viewer HTML**にまとめるPython CLIツールです。
