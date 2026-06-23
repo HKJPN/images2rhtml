@@ -5,7 +5,7 @@ Double-click `sample.restricted.view.html` or open it in any standard web browse
 To open and edit `sample.restricted.view.html` in MD//WORKS, please use the following recovery password:
 
 ```text
-images2rhtml-sample
+sample1234
 
 ```
 
