@@ -80,7 +80,7 @@ ModuleNotFoundError: No module named 'cryptography'
 
 ### 対応環境
 
-Restricted Viewer HTMLの**作成**は、Windows、macOS、Linuxなど、Pythonと`cryptography`を利用できる環境を想定しています。iPadでは`cryptography`が利用できないためimages2rHTML.pyは利用できませんが、MD//WORKSでRestricted Viewer HTMLの作成が可能です。
+Restricted Viewer HTMLの**作成**は、Windows、macOS、Linuxなど、Pythonと`cryptography`を利用できる環境を想定しています。iPadでは`cryptography`が利用できないためimages2rHTML.pyは利用できませんが、MD//WORKSを用いることでRestricted Viewer HTMLの出力が可能です。
 
 作成済みHTMLの**閲覧**は、Chrome、Edge、Firefox、Brave、Safariなど、Web Crypto APIに対応した一般的なブラウザで行えます。iPadでも作成済みViewerを閲覧できます。
 
