@@ -174,7 +174,9 @@ Confirm recovery password:
 Type your password twice and press Enter.
 
 > 💡 **The password is invisible!** When typing, no characters or asterisks (●) will appear on the screen. This is normal security behavior. Just type and press Enter.
+> 
 > 💡 **This password is NOT for viewing.** Viewers do not need a password to open the HTML file. The Recovery password is strictly for the author/editor to restore and edit the original Markdown later in MD//WORKS.
+> 
 > ⚠️ **Keep it safe:** If you lose this Recovery password, you will not be able to restore the encrypted Markdown data.
 
 *Note: The Recovery password is strictly case-sensitive and distinguishes between spaces, symbols, and double-byte/single-byte characters.*
