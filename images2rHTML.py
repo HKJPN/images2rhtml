@@ -43,6 +43,8 @@ DISPLAY_KEY_BYTES = 32
 DISPLAY_IV_BYTES = 12
 VIEWER_BOX_SCRIPT_ID = "mdworks-restricted-viewer-box"
 RECOMMENDED_VIEWER_SUFFIX = ".restricted.view.html"
+DEFAULT_MAX_KB = 300
+DEFAULT_WARNING_MB = 20
 TEMPLATE_PATH = Path(__file__).resolve().parent / "templates" / "restricted-viewer-v1.html"
 
 ImageKind = Literal["png", "jpeg", "webp"]
@@ -110,8 +112,26 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Prompt twice for the Recovery password when generating Restricted Viewer HTML or --emit-recovery-box.",
     )
-    parser.add_argument("--max-kb", type=positive_int, help="Maximum accepted source image size in KiB.")
-    parser.add_argument("--warning-mb", type=positive_int, help="Warn when estimated Markdown size exceeds this many MiB.")
+    parser.add_argument(
+        "--max-kb",
+        type=positive_int,
+        default=DEFAULT_MAX_KB,
+        metavar="NUMBER",
+        help=(
+            "Maximum accepted source image size in KiB "
+            f"(default: {DEFAULT_MAX_KB})."
+        ),
+    )
+    parser.add_argument(
+        "--warning-mb",
+        type=positive_int,
+        default=DEFAULT_WARNING_MB,
+        metavar="NUMBER",
+        help=(
+            "Warn when the estimated or final Restricted Viewer size exceeds "
+            f"this value in MiB (default: {DEFAULT_WARNING_MB})."
+        ),
+    )
     parser.add_argument("--overwrite", action="store_true", help="Overwrite an existing emitted Markdown or Recovery box file.")
     parser.add_argument("--dry-run", action="store_true", help="Report planned processing without writing output.")
     parser.add_argument("--version", action="version", version=f"%(prog)s {VERSION}")
@@ -535,6 +555,21 @@ def escape_json_for_script(json_text: str) -> str:
     return (json_text.replace("&", "\\u0026").replace("<", "\\u003c").replace(">", "\\u003e").replace("\u2028", "\\u2028").replace("\u2029", "\\u2029"))
 
 
+
+def validate_template_file(template_path: Path = TEMPLATE_PATH) -> None:
+    """Fail early when the Restricted Viewer template is unavailable."""
+    try:
+        if not template_path.is_file():
+            raise OSError("not a regular file")
+        with template_path.open("r", encoding="utf-8") as handle:
+            handle.read(1)
+    except OSError as exc:
+        raise RuntimeError(
+            "required Restricted Viewer template is missing or unreadable:\n"
+            f"{template_path}\n\n"
+            "Keep images2rHTML.py and the templates folder in the original directory structure."
+        ) from exc
+
 def render_template(*, title: str, viewer_json: dict[str, Any], template_path: Path = TEMPLATE_PATH) -> str:
     """Render the Restricted Viewer template using explicit placeholders."""
     try:
@@ -645,6 +680,12 @@ def main(argv: list[str] | None = None) -> int:
     if (final_output or args.emit_recovery_box is not None) and not args.recovery_password and not args.dry_run:
         print("error: Restricted Viewer and Recovery box output require --recovery-password.", file=sys.stderr)
         return EXIT_FATAL
+    if final_output and not args.dry_run:
+        try:
+            validate_template_file(TEMPLATE_PATH)
+        except RuntimeError as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return EXIT_FATAL
     if final_output and args.output is not None and args.output.suffixes[-3:] != [".restricted", ".view", ".html"]:
         print("warning: recommended output extension is .restricted.view.html", file=sys.stderr)
     for output_path, label in ((args.emit_markdown, "Markdown output"), (args.emit_recovery_box, "Recovery box output"), (args.output, "Restricted Viewer output")):
@@ -662,13 +703,12 @@ def main(argv: list[str] | None = None) -> int:
     print_report(result, dry_run=args.dry_run)
     if args.output is not None:
         print(f"Planned output: {args.output}", file=sys.stderr)
-    if args.warning_mb is not None:
-        threshold = args.warning_mb * 1024 * 1024
-        estimate = estimated_viewer_size(result.valid_images) if final_output else estimated_markdown_size(result.valid_images)
-        if estimate > threshold:
-            print(f"warning: estimated output size exceeds --warning-mb ({args.warning_mb} MiB).", file=sys.stderr)
-        else:
-            print(f"Warning threshold exceeded: no", file=sys.stderr)
+    threshold = args.warning_mb * 1024 * 1024
+    estimate = estimated_viewer_size(result.valid_images)
+    if estimate > threshold:
+        print(f"warning: estimated output size exceeds --warning-mb ({args.warning_mb} MiB).", file=sys.stderr)
+    else:
+        print(f"Warning threshold exceeded: no", file=sys.stderr)
     if args.dry_run:
         return EXIT_PARTIAL if result.skipped_images else EXIT_SUCCESS
 
@@ -717,7 +757,7 @@ def main(argv: list[str] | None = None) -> int:
         wrote_output = True
         print(f"Wrote Restricted Viewer HTML: {args.output}", file=sys.stderr)
         print(f"Final output size: {final_size} bytes", file=sys.stderr)
-        if args.warning_mb is not None and final_size > args.warning_mb * 1024 * 1024:
+        if final_size > args.warning_mb * 1024 * 1024:
             print(f"warning: final output size exceeds --warning-mb ({args.warning_mb} MiB).", file=sys.stderr)
 
     if not wrote_output:
