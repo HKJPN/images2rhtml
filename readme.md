@@ -4,7 +4,8 @@
 <img width="1280" height="720" alt="プレゼンテーション1" src="https://github.com/user-attachments/assets/a5279906-2db3-4e67-9a60-9e645ae6e726" />
 
  **What is images2rHTML.py?**<br>
- A Python CLI tool that compiles multiple images from a folder into a single "Restricted Viewer HTML" file with an Outline (table of contents).<br>
+ A Python CLI tool that compiles multiple images from a folder into a single "Restricted Viewer HTML" file with an Outline (table of contents).
+
  **Key Features**<br>
  * **Viewing Restrictions and Protection:** The generated HTML can be viewed directly in a standalone browser. It restricts user actions such as text selection, copying, right-clicking, image dragging, and printing.
  * **Data Recovery and Re-editing:** By using the "Recovery password" set during generation, you can restore the original Markdown in [MD//WORKS](https://github.com/HKJPN/markdown-editor), allowing you to modify headings or add/remove images.
