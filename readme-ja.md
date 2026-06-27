@@ -5,7 +5,7 @@
 
 **`images2rHTML.py` とは**
  フォルダ内の複数画像を、Outline（目次）付きの「Restricted Viewer HTML」にまとめるPython CLIツールです。
- **主な特徴**
+ **主な特徴**<br>
  * **閲覧制限と保護:** 生成したHTMLはブラウザ単体で閲覧可能。テキスト選択、コピー、右クリック、画像ドラッグ、印刷などの操作を抑制します。
  * **元データの復元・再編集:** 生成時に設定する「Recovery password」を使用すれば、[MD//WORKS](https://github.com/HKJPN/markdown-editor)で元のMarkdownを復元し、見出しの修正や画像の追加・削除などが可能です。
  * **大容量ファイルに対応:** コマンドラインで動作するため、生成サイズに事実上の制限がありません。大量の画像ファイルをまとめる用途に最適です。（※GUIで動作する[MD//WORKS](https://github.com/HKJPN/markdown-editor)にも同様の機能がありますが、ファイルサイズ上限は約50MBとなります）
