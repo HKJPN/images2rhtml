@@ -3,7 +3,7 @@
 [🇺🇸 English](readme.md) or [🇯🇵 日本語](readme-ja.md)
   <img width="1280" height="720" alt="プレゼンテーション1" src="https://github.com/user-attachments/assets/13934b8b-bf8e-4974-ae66-ea30d8b84910" />
 
-`images2rHTML.py`は、フォルダ内の複数画像を、Outline（目次）付きの**Restricted Viewer HTML**にまとめるPython CLIツールです。作成したHTMLはブラウザだけで閲覧でき、テキスト選択、コピー、右クリック、画像ドラッグ、印刷などの一般的な操作を抑制します。生成時に設定したRecovery passwordを使うと、[MD//WORKS](https://github.com/HKJPN/markdown-editor)で元のMarkdownを復元し、見出しの修正、画像の追加・削除、文章の追記などを再び行えます。`images2rHTML.py`はコマンドラインで動作するため生成するサイズに事実上の制限がなく、多数の画像ファイルをHTMLにまとめる用途に向いています。一方、MD//WORKSも、GUI環境で同様な制限付きファイルの生成や再編集が可能ですが、画像を含んだファイルサイズの上限は50MB程度に制限されます。さらに、
+`images2rHTML.py`は、フォルダ内の複数画像を、Outline（目次）付きの**Restricted Viewer HTML**にまとめるPython CLIツールです。作成したHTMLはブラウザだけで閲覧でき、テキスト選択、コピー、右クリック、画像ドラッグ、印刷などの一般的な操作を抑制します。生成時に設定したRecovery passwordを使うと、[MD//WORKS](https://github.com/HKJPN/markdown-editor)で元のMarkdownを復元し、見出しの修正、画像の追加・削除、文章の追記などを再び行えます。`images2rHTML.py`はコマンドラインで動作するため生成するサイズに事実上の制限がなく、多数の画像ファイルをHTMLにまとめる用途に向いています。一方、MD//WORKSも、GUI環境で同様な制限付きファイルの編集や生成が可能ですが、画像を含んだファイルサイズの上限は50MB程度に制限されます。
 
 ```text
 画像フォルダ
