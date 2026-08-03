@@ -32,6 +32,12 @@ MD//WORKSでRecovery passwordを入力
 
 ---
 
+## 🚀GUIデモ
+
+`images2rhtml.py` はCLIツールですが、ブラウザで動作するGUIでのデモも用意しました。こちらから実行できます。 👉https://hkjpn.github.io/images2rhtml/
+
+---
+
 ## ✨ 主な機能
 
 * PNG、JPEG、WebP画像を1つのHTMLへまとめる
