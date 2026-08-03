@@ -34,6 +34,12 @@ Restore original Markdown & Re-edit
 
 ---
 
+## 🚀GUI Demo in your browser
+
+`images2rhtml.py` is a CLI tool but you can try it instantly here. 👉https://hkjpn.github.io/images2rhtml/
+
+---
+
 ## ✨ Key Features
 
 * Combines PNG, JPEG, and WebP images into a single HTML file.
