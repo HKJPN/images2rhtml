@@ -38,7 +38,7 @@ Restore original Markdown & Re-edit
 
 `images2rhtml.py` is a CLI tool but you can try it instantly here. 👉https://hkjpn.github.io/images2rhtml/
 
-While it is not as suited for processing a large number of images or large file sizes compared to the CLI tool, it provides a quick and easy way to test the functionality.
+Please note that this is a working GUI demo. For processing a large number of images or large file sizes, please use the CLI tool
 
 ---
 
