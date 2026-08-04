@@ -38,6 +38,8 @@ MD//WORKSでRecovery passwordを入力
 
 大量の画像ファイルや大きなサイズの画像処理には、CLIツールをお使いください。
 
+<img src="./images/images2rHTMLJ.jpg" alt="images2rHTMLJ.jpg" width="50%"><br>
+
 
 
 ---
