@@ -1,4 +1,4 @@
-# images2rHTML.py ユーザーマニュアル ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+# images2rhtml.py ユーザーマニュアル ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
 [🇺🇸 English](readme.md) or [🇯🇵 日本語](readme-ja.md)
   <img width="1280" height="720" alt="プレゼンテーション1" src="https://github.com/user-attachments/assets/13934b8b-bf8e-4974-ae66-ea30d8b84910" />
