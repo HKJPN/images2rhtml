@@ -4,7 +4,7 @@
   <img width="1280" height="720" alt="プレゼンテーション1" src="https://github.com/user-attachments/assets/13934b8b-bf8e-4974-ae66-ea30d8b84910" />
 
 **`images2rHTML.py` とは**
- フォルダ内の複数画像を、Outline（目次）付きの「Restricted Viewer HTML」にまとめるPython CLIツールです。<br>
+ フォルダ内の複数画像を、Outline（目次）付きの「Restricted Viewer HTML」にまとめるPython CLIツールです。Restricted Viewer HTMLの一例は[ここからご覧いただけます](https://hkjpn.github.io/examplerhtml/)。<br>
 
  **主な特徴**<br>
  * **閲覧制限と保護:** 生成したHTMLはブラウザ単体で閲覧可能。テキスト選択、コピー、右クリック、画像ドラッグ、印刷などの操作を抑制します。
